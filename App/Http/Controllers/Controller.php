@@ -74,11 +74,11 @@ class Controller
     }
     public static function show($id)
     {
-        // 
+        return "Show the id";
     }
     protected static function success($message)
     {
-        // 
+        return "You have succeded" ;
     }
     protected static function error($message)
     {

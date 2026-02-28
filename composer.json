@@ -2,7 +2,9 @@
     "name": "mwjb/app-1",
     "autoload": {
         "psr-4": {
-            "App\\": "App/"
+            "App\\": "App/",
+            "Challenges\\":"challenges/"
+            
         }
     },
     "authors": [
@@ -11,7 +13,7 @@
             "email": "magedyaseengroups@gmail.com"
         }
     ],
-    "require": {
+    "require-dev": {
         "symfony/var-dumper": "^8.0"
     }
 }

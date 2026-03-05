@@ -1,7 +1,8 @@
 <?php
-//// Increment/Decrement operators////
-// ++ / -- / += / -=
-$counter = 0;
-$counter++; // ++ = +1
-$counter--;  //-- = -1
-echo $counter += 3;// +3
+//// Operator Precedence ////
+// " ( ) "
+// " ** "
+// " * / % "
+// " +  -  "
+$total = 1 + 2 - 3 * 4 / 5 ** 6;
+echo $total; // 2.999232

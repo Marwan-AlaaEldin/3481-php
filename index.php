@@ -1,49 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <form action="index.php" method="get">
-        <label>username:</label><br>
-        <input type="text" name="username"><br>
-        <label>password:</label><br>
-        <input type="text" name="password"><br>
-        <input type="sumbit" value="Log in"><br>
-    </form>
-
-    echo $_GET = 
-
-</body>
-
-</html>
-
 <?php
+////                Conditions                          //// 
+// Ternary operator // logical condition ? " " : " "
+//if stament = if some condition is true , do something . 
+//              if condition is false, don't do it .
 
-echo $_GET =
+$age = 21;
 
-// $_GET, $_POST = special variables used to collect data from an HTML form 
-//                 data is sent to the file in the action attribute of <form>
-//                  <form action="sme.file.php" method="get">
+if ($age == 0) {
+    echo "you are {$age} ,So you were just born";
+} elseif ($age <= 6 & $age > 0) {
+    echo "you are {$age} ,So too young to enter this website";
+} elseif ($age >= 100) {
+    echo "you are{$age} ,So you too old to enter this website";
+} elseif ($age >= 6) {
+    echo "you are {$age} ,So you allowed to enter this website";
+} else {
+    echo "you not allowed to enter this website";
+}
 
-// $_GET =  Data is appended to the url 
-//          Not secure
-//          char limit 
-//          Bookmark is possible w/ values
-//          GET requests can be cached 
-//          Better for a search page 
-
-// $_POST = Data is packaged inside the body of the HTTP request 
-//          More secure
-//          No data limit 
-//          Bookmark is possible w/ values
-//          GET requests can be cached
-//          Better for a search page  
-
-
-?>
+// Ternary operator // logical condition ? " " : " "
+$mobilePrice = "27000";
+$wallet = "0+";
+echo $wallet >= $mobilePrice
+    ? "You have EGP$wallet, You can buy it :)<hr >"
+    : "Mobile price is $mobPrice, and you have $wallet, so you are too pooooor<hr >";

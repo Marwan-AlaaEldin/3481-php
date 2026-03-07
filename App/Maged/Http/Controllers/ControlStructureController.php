@@ -50,8 +50,6 @@ class ControlStructureController
         }
     }
 
-
-
     public static function switchCase($dayNumber)
     {
         switch ($dayNumber) {
@@ -84,22 +82,24 @@ class ControlStructureController
         echo 'Switch-case completed successfully';
     }
 
-    public static function getDayArName($enName)
+    public static function getDayArName(string $enName): string
     {
+        $enName = strtolower($enName);
+
         switch ($enName) {
-            case 'Sunday':
+            case 'sunday':
                 return 'الأحد';
-            case 'Monday':
+            case 'monday':
                 return 'الإثنين';
-            case 'Tuesday':
+            case 'tuesday':
                 return 'الثلاثاء';
-            case 'Wednesday':
+            case 'wednesday':
                 return 'الأربعاء';
-            case 'Thursday':
+            case 'thursday':
                 return 'الخميس';
-            case 'Friday':
+            case 'friday':
                 return 'الجمعة';
-            case 'Saturday':
+            case 'saturday':
                 return 'السبت';
             default:
                 return 'Wrong day name!!!';
@@ -108,11 +108,46 @@ class ControlStructureController
         echo 'Switch-case completed successfully';
     }
 
-    public static function weekDaysMessage ($dayName) {
-        // Use switch-case to get a message
-        /**
-         * Saturday and Friday  => Happy weekend
-         * Sunday - Thursday    => Enjoy your work
-         */
+    public static function weekDaysMessage(string $dayName): string
+    {
+        $dayName = strtolower($dayName);
+
+        switch ($dayName) {
+            case 'sunday':
+            case 'monday':
+            case 'tuesday':
+            case 'wednesday':
+            case 'thursday':
+                return 'Enjoy your work';
+
+            case 'friday':
+            case 'saturday':
+                return 'Happy weekend';
+
+            default:
+                return 'Wrong day name!!!';
+        }
+    }
+
+    public static function matchCase(string $status): string
+    {
+        // $colorMap = [
+        //     'pending' => 'orange',
+        //     'shipped' => 'blue',
+        //     'delivered' => 'green',
+        //     'approved' =>  'green',
+        //     'cancelled' =>  'red',
+        //     'refunded' =>  'red',
+        // ];
+
+        // return $colorMap[$status] ?? 'gray';
+
+        return match ($status) {
+            'pending' => 'orange',
+            'shipped' => 'blue',
+            'delivered', 'approved' =>  'green',
+            'cancelled', 'refunded' =>  'red',
+            default => 'gray'
+        };
     }
 }

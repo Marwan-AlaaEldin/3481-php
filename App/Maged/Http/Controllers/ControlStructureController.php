@@ -114,5 +114,20 @@ class ControlStructureController
          * Saturday and Friday  => Happy weekend
          * Sunday - Thursday    => Enjoy your work
          */
+        $dayName = strtolower($dayName);
+        switch ($dayName) {
+            case 'saturday':
+                return 'Happy weekend.';
+            case 'friday':
+                return 'Happy weekend.';
+            case 'sunday':
+            case 'monday':
+            case 'tuesday':
+            case 'wednesday':
+            case 'thursday':
+                return 'Enjoy your work.';
+            default:
+                return 'Wrong day name.';
+        }
     }
 }

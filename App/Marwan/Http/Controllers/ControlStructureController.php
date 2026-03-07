@@ -132,19 +132,12 @@ class ControlStructureController
     {
         $dayName = strtolower($dayName);
 
-        match ($dayName) {
-             'sunday' => 'Enjoy your work',
-             'monday'=>'Enjoy your work',
-             'tuesday'=>'Enjoy your work',
-             'wednesday'=>'Enjoy your work',
-             'thursday'=>'Enjoy your work',
-                
-
-             'friday'=>'Happy weekend',
-             'saturday'=>'Happy weekend',
-                
-
-            default=> 'Wrong day name!!!'
+        return match ($dayName) {
+             'sunday','monday','tuesday','wednesday','thursday' => 'Enjoy your work',
+             
+            'friday','saturday'=>'Happy weekend',
+             
+             default=> 'Wrong day name!!!'
         };
     }
 

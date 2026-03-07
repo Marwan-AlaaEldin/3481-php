@@ -24,8 +24,7 @@ else {echo "$n is odd number<br>";
  
 public static function checyear($leapyear){
 if($leapyear%4==0){
-    echo "is leabyear";
-}
+    echo "is leabyear";}
 else($leapyear%100!==0);{
  echo"is not leabyer";
 }

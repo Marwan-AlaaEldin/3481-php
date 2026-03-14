@@ -10,7 +10,13 @@ $enDayName= 'saturday';
 $enDayName=   ucfirst(strtolower($enDayName));
 
 $arDayName = ControlStructureController::getDayArName($enDayName);
+ 
+echo "<h2>The Aabic day name for $enDayName is $arDayName</h2>";
+echo"<hr>";
+echo"<hr>";
+ 
 echo "<h2>The Arabic day name for $enDayName is $arDayName</h2>";
 
 $weekDayMessage = ControlStructureController::weekDaysMessage($enDayName);
 echo "<h2>Today is $enDayName, $weekDayMessage</h2>";
+ 

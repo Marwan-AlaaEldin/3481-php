@@ -9,7 +9,7 @@
 
 <body>
     <h1>Login</h1>
-    <form action="">
+    <form method="post" action="check-user.php">
         <div>
             <label for="email">Eamil</label>
             <input type="email" id="email" name="email">

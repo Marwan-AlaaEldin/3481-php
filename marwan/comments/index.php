@@ -332,6 +332,13 @@ $comments = [
     ]
 ];
 
-echo '<Hr><h1> comments</h1> ';  
+$method=$_SERVER["REQUEST_METHOD"];
+if($method!='GET'){
+echo "Only GET requests are allowed";
+die;
+}
+echo "Your GET request contains : <hr>";
+echo var_dump($_GET);
+echo '<Hr><h1> comments</h1> ';     
 $comments_json = json_encode($comments);
 echo $comments_json;

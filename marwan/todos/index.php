@@ -181,6 +181,14 @@ $todos = [
         'userId' => 142
     ]
 ];
-echo '<Hr><h1> todos</h1> ';  
+
+$method=$_SERVER["REQUEST_METHOD"];
+if($method!='POST'){
+echo "Only POST requests are allowed";
+die;
+}
+echo "Your POST request contains : <hr>";
+echo var_dump($_POST);
+echo '<Hr><h1> todos</h1> ';     
 $todos_json = json_encode($todos);
 echo $todos_json;

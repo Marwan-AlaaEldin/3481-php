@@ -1,6 +1,11 @@
 <?php
 var_dump($_POST);
 
+<<<<<<< HEAD
+$method = var_dump($_SERVER['REQUEST_METHOD']);
+
+if ($method !== $_POST) die("POST method only");
+=======
 
 $fullName = $_POST['fullname'] ?? '';
 
@@ -39,3 +44,4 @@ $comments =  $_POST['comments'];
 
 
 var_dump($fullName);
+>>>>>>> 2dfdb16cd68d0bfa41e2016f13ce5497b6c75ee1
